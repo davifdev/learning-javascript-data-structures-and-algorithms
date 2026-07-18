@@ -40,7 +40,7 @@ for (let i = 3; i < 20; i++) {
 }
 
 for (let i = 1; i < fibonacci.length; i++) {
-  // console.log(fibonacci[i]);
+  console.log(fibonacci[i]);
 }
 
 // Acrescentando elementos
