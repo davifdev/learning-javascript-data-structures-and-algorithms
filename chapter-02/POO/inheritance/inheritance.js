@@ -9,7 +9,6 @@ class Book {
     console.log(this.title);
   }
 }
-
 class ITBook extends Book {
   constructor(title, pages, isbn, technology) {
     super(title, pages, isbn);
@@ -27,4 +26,5 @@ const jsBook = new ITBook(
   "1234567890",
   "JavaScript",
 );
+
 console.log(jsBook);
