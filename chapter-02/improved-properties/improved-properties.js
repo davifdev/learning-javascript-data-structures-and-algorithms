@@ -13,7 +13,6 @@ let num2 = 2;
 console.log(num1, num2);
 
 // property shorthand
-
 let [first_name, last_name] = ["Davi", "Fernandes"];
 const person = {
   first_name,
