@@ -4,7 +4,7 @@ let nums = [3, 4, 5];
 function sum(x, y, z) {
   return x + y + z;
 }
-
+//    [3, 4, 5] = 3, 4, 5
 console.log(sum(...nums));
 
 console.log(sum.apply(undefined, nums));
