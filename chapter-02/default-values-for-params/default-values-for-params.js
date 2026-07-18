@@ -3,7 +3,7 @@ function sumES6(x = 1, y = 2, z = 3) {
   return x + y + z;
 }
 
-console.log(sum(4, 2));
+console.log(sumES6(4, 2));
 
 // Definindo valores fefault para os parâmetros das funções com ES5
 function sumES5(x, y, z) {
@@ -14,7 +14,7 @@ function sumES5(x, y, z) {
   return x + y + z;
 }
 
-// Definindo valores fefault para os parâmetros das funções com ES5 sem saber os parâmetros
+// Definindo valores default para os parâmetros das funções com ES5 sem saber os parâmetros
 function sumES5_2() {
   var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
   var y = arguments.length > 0 && arguments[1] !== undefined ? arguments[1] : 2;
@@ -23,4 +23,6 @@ function sumES5_2() {
   return x + y + z;
 }
 
-// Uma função tem um objeto embutido chamado arguments. Esse objeto é um array dos argumentos usados quando a função é chamada. Podemos acessar dinamicamente os argumentos e usá-los, mesmo que não saivamos o nome deles.
+console.log(sumES5_2());
+
+// Uma função tem um objeto embutido chamado arguments. Esse objeto é um array dos argumentos usados quando a função é chamada. Podemos acessar dinamicamente os argumentos e usá-los, mesmo que não saibamos o nome deles.
