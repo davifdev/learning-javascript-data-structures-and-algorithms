@@ -1,6 +1,6 @@
 // Estruturas condicionais
 
-const num = 2;
+var num = 2;
 
 if (num === 1) {
   console.log("num is equal to 1");
@@ -39,7 +39,7 @@ num === 1
 //   console.log("please provide a value month!");
 // }
 
-const monthNumber = 9;
+const monthNumber = 1;
 
 switch (monthNumber) {
   case 1:
