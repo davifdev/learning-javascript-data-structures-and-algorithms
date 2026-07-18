@@ -26,6 +26,5 @@ class BookClass {
     console.log(this.title);
   }
 }
-
 const bookClass = new BookClass("Batman Dark Knight", 489, "isbn");
 bookClass.printTitle();
