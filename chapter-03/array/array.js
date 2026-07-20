@@ -23,11 +23,11 @@ daysOfWeek = new Array(
   "Friday",
   "Saturday",
 );
-console.log(daysOfWeek.length);
+// console.log(daysOfWeek.length);
 
 // Acessando elementos e fazendo uma iteração em um array
 for (let i = 0; i < daysOfWeek.length; i++) {
-  console.log(daysOfWeek[i]);
+  // console.log(daysOfWeek[i]);
 }
 
 // Descobrindo quais são o números da sequência de Fibonacci
@@ -40,7 +40,7 @@ for (let i = 3; i < 20; i++) {
 }
 
 for (let i = 1; i < fibonacci.length; i++) {
-  console.log(fibonacci[i]);
+  // console.log(fibonacci[i]);
 }
 
 // Acrescentando elementos
@@ -49,7 +49,7 @@ for (let i = 1; i < fibonacci.length; i++) {
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 numbers[numbers.length] = 10;
 
-console.log(numbers);
+// console.log(numbers);
 
 // Em JavaScript um array é um objeto mutável. Podemos facilmente lhe acrescentar novos elementos. O objeto crescerá dinamicamente á media que novos elementos forem adicionados.
 
@@ -66,7 +66,7 @@ Array.prototype.insertFirstPosition = function (value) {
 };
 
 numbers.insertFirstPosition(-1);
-console.log(numbers);
+// console.log(numbers);
 
 // Usando o método unshift
 numbers.unshift(-2);
@@ -80,7 +80,7 @@ for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i + 1];
 }
 
-console.log(numbers);
+// console.log(numbers);
 
 Array.prototype.reIndex = function (myArray) {
   const newArray = [];
@@ -104,3 +104,17 @@ numbers.removeFirstPosition();
 
 // Usando o método shift
 numbers.shift();
+
+const newNumbers = [-3, -2, -1, 0, -1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+console.log("Before splice: ", newNumbers);
+
+newNumbers.splice(5, 3);
+console.log("After splice: ", newNumbers);
+
+// Adicionando 3 elementos a partir do índice 5
+newNumbers.splice(5, 0, 2, 3, 4);
+console.log("Add new numbers: ", newNumbers);
+
+// Removendo três elementos, e adicionando mais três
+numbers.splice(5, 3, 2, 3, 4);
+console.log("Check: ", newNumbers);
