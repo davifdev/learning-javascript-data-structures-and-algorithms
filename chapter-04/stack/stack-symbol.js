@@ -6,12 +6,15 @@ class Stack {
   constructor() {
     this[_items] = [];
   }
+
+  push(element) {
+    this[_items].push(element);
+  }
 }
 
 const stack = new Stack();
+
 const objectSymbols = Object.getOwnPropertySymbols(stack);
-console.log(objectSymbols.length);
-console.log(objectSymbols);
-console.log(objectSymbols[0]);
-console.log(objectSymbols[0]);
-stack[objectSymbols[0]].push(1);
+console.log(stack.push(5));
+console.log(stack.push(5));
+console.log(stack.push(5));
