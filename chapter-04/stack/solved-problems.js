@@ -1,4 +1,4 @@
-// As pilhas têm uma variedade de aplicações nos problemas do mundo real. Elas podem ser usadas para problemas de backtracking, a  fim de lembrar as tarefas ou os caminho visitados para desfazer ações
+// As pilhas têm uma variedade de aplicações nos problemas do mundo real. Elas podem ser usadas para problemas de backtracking, a fim de lembrar as tarefas ou os caminho visitados para desfazer ações
 class Stack {
   constructor() {
     this.items = [];
