@@ -1,4 +1,4 @@
-// Um palíndromo é uma palavra, frase, número ou outra sequência de caracteres que é lido igualmente de trá pra frente ou de frente para trás
+// Um palíndromo é uma palavra, frase, número ou outra sequência de caracteres que é lido igualmente de trás pra frente ou de frente para trás
 
 // Há diferentes algoritimos que podem ser usados para verificar se uma frase ou uma string é um palíndromo. O modo mais fácil é inverter a string e compará-la com a string original. Se as duas strings forem iguais, teremos um palíndromo. Também podemos uar uma pilha para fazer isso, mas a maneira mais fácil de resolver esse problema com uma estrutura de dados é usando um deque.
 class Deque {
@@ -101,8 +101,10 @@ function palindromeChecker(aString) {
   ) {
     return false;
   }
+
   const deque = new Deque();
   const lowerString = aString.toLowerCase().split(" ").join("");
+
   let isEqual = true;
   let firstChar, lastChar;
   for (let i = 0; i < lowerString.length; i++) {
