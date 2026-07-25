@@ -16,7 +16,6 @@ class Queue {
     }
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
-    this.lowestCount++;
     return result;
   }
 
@@ -36,12 +35,6 @@ class Queue {
     return this.count - this.lowestCount;
   }
 
-  clear() {
-    this.items = {};
-    this.count = 0;
-    this.lowestCount = 0;
-  }
-
   toString() {
     if (this.isEmpty()) {
       return "";
@@ -51,15 +44,12 @@ class Queue {
     for (let i = this.lowestCount + 1; i < this.count; i++) {
       objString = `${objString}, ${this.items[i]}`;
     }
-    return objString;
   }
 }
 
 const queue = new Queue();
 queue.enqueue(10);
-queue.enqueue(5);
+queue.enqueue(8);
 queue.enqueue(6);
 queue.enqueue(3);
-queue.enqueue(2);
-queue.enqueue(1);
-console.log(queue.toString());
+console.log(queue.dequeue());
