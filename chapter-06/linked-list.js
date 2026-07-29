@@ -10,16 +10,14 @@ export default class LinkedList {
 
   // Adiciona um novo elemento no final da lista
   push(element) {
-    const node = new Node(element); // 1
-    let current; // 2
+    const node = new Node(element);
+    let current;
     if (this.head == null) {
-      // 3
       this.head = node;
     } else {
-      current = this.head; // 4
+      current = this.head;
       while (current.next != null) {
-        // 5
-        current = current.next; // 6
+        current = current.next;
       }
       current.next = node;
     }
@@ -107,7 +105,7 @@ export default class LinkedList {
     return this.head;
   }
 
-  // Esse método devolve uma representalção em string da lista ligada.
+  // Esse método devolve uma representação em string da lista ligada.
   toString() {
     if (this.head == null) {
       return "";
@@ -123,6 +121,8 @@ export default class LinkedList {
 }
 
 const list = new LinkedList();
+list.push(14);
 list.push(15);
-list.push(10);
-console.log(list);
+list.push(16);
+list.removeAt(1);
+console.log(list.toString());
