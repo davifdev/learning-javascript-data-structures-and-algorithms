@@ -17,7 +17,7 @@ export class DoublyLinkedList extends LinkedList {
           this.head = node;
           this.tail = node;
         } else {
-          node.next = this.head;
+          node.next = current;
           current.prev = node;
           this.head = node;
         }
@@ -60,7 +60,7 @@ export class DoublyLinkedList extends LinkedList {
         previous.next = current.next;
         current.next.prev = previous;
       }
-      this.count++;
+      this.count--;
       return current.element;
     }
     return undefined;
