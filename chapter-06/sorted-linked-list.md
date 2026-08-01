@@ -1,1 +1,1 @@
-Uma lista ligada ordenada é uma lista que mantém seus elementos ordenados. Para manter todos os elementos ordenados, em uma vez de aplicar um algoritimo de ordenação, inseriremos element em sua posição correta a fim de manter a lista sempre ordenada.
+Uma lista ligada ordenada é uma lista que mantém seus elementos ordenados. Para manter todos os elementos ordenados, em vez de aplicar um algoritimo de ordenação, inseriremos element em sua posição correta a fim de manter a lista sempre ordenada.
