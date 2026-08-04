@@ -96,29 +96,101 @@ class Set {
     }
     return intersectionSet;
   }
+
+  intersectionUpdated(otherSet) {
+    const intersectionSet = new Set();
+    const values = this.values();
+    const otherValues = otherSet.values();
+    let biggerSet = values;
+    let smallerSet = otherValues;
+
+    if (otherValues.length - values.length > 0) {
+      biggerSet = otherValues;
+      smallerSet = values;
+    }
+    smallerSet.forEach((value) => {
+      if (biggerSet.includes(values)) {
+        intersectionSet.add(value);
+      }
+    });
+    return intersectionSet;
+  }
+
+  difference(otherSet) {
+    const differecenSet = new Set();
+    this.values().forEach((value) => {
+      if (!otherSet.hasElement(value)) {
+        differecenSet.add(value);
+      }
+    });
+
+    return differecenSet;
+  }
+
+  isSubsetOf(otherSet) {
+    if (this.size() > otherSet.size()) {
+      return false;
+    }
+    let isSubset = true;
+    this.values().every((value) => {
+      if (!otherSet.hasElement(value)) {
+        isSubset = false;
+        return false;
+      }
+      return true;
+    });
+    return isSubset;
+  }
 }
 
 // Union
-const setA = new Set();
-setA.add(1);
-setA.add(2);
-setA.add(3);
-const setB = new Set();
-setB.add(3);
-setB.add(4);
-setB.add(5);
-setB.add(6);
-const unionAB = setA.union(setB);
-console.log(unionAB.values());
+// const setA = new Set();
+// setA.add(1);
+// setA.add(2);
+// setA.add(3);
+// const setB = new Set();
+// setB.add(3);
+// setB.add(4);
+// setB.add(5);
+// setB.add(6);
+// const unionAB = setA.union(setB);
+// console.log(unionAB.values());
 
-// Intersection
-const setIA = new Set();
-setIA.add(1);
-setIA.add(2);
-setIA.add(3);
-const setIB = new Set();
-setIB.add(2);
-setIB.add(3);
-setIB.add(4);
-const intersectionAB = setIA.intersection(setIB);
-console.log(intersectionAB.values());
+// // Intersection
+// const setIA = new Set();
+// setIA.add(1);
+// setIA.add(2);
+// setIA.add(3);
+// const setIB = new Set();
+// setIB.add(2);
+// setIB.add(3);
+// setIB.add(4);
+// const intersectionAB = setIA.intersection(setIB);
+// console.log(intersectionAB.values());
+
+// // Diference
+// const setDA = new Set();
+// setDA.add(1);
+// setDA.add(2);
+// setDA.add(3);
+// const setDB = new Set();
+// setDB.add(2);
+// setDB.add(3);
+// setDB.add(4);
+// const differenceAB = setDB.difference(setDA);
+// console.log(differenceAB.values());
+
+// Subset
+const setSA = new Set();
+setSA.add(1);
+setSA.add(2);
+const setSB = new Set();
+setSB.add(1);
+setSB.add(2);
+setSB.add(3);
+const setSC = new Set();
+setSC.add(1);
+setSC.add(3);
+setSC.add(4);
+console.log(setSA.isSubsetOf(setSB));
+console.log(setSA.isSubsetOf(setSC));

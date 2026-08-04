@@ -24,6 +24,14 @@ Quando criamos uma consulta SQL, podemos especificar se queremos ler todos os da
 
 - <strong>Diferença</strong>: dados dois conjuntos, devolve um novo conjunto com todos os elementos presentes no primeiro conjunto, mas não no segundo.
 
-- <strong>União</strong>: confirma se um dado conjunto é um subconjunto do outro
+- <strong>Subconjunto</strong>: confirma se um dado conjunto é um subconjunto do outro
 
 É Importante observar que os métodos <code>union</code>, <code>intersection</code> e <code>difference</code> não modificam a instância a tual da classe <code>Set</code> e <code>otherSet</code>. Os métodos ou funções que não têm efeito colateral são chamados de <code>funções puras</code>. Uma função pura ela não modifica a instância atual nem os parâmetros: ela epans gera um novo resultado.
+
+## Multiconjuntos ou bags
+
+A estrutura de dados de conjunto não permite elemntos duplicados. Entretanto em matemática, temos um conceito chamado multiconjunto (multiset), que permite que o mesmo elemento seja inserido no conjunto, mesmo que ele já tenha sido inserido antes. Os multiconjuntos (ou bags) podem ser muito úteis para contar quantas vezes o elemento está presente em um conjunto. Eles são frequentemente aplicados em sistemas de banco de dados.
+
+## Resumo
+
+Aprendemos a implementar uma classe Set do zero, a qual é semelhante á classe Set definida na ECMAScript 2015. Também discutimos alguns métodos que, em geral. não estão presentes nas implementações da estrutura de dados para conjuntos em outras linguagens de progamação como união, interseção, diferença e subconjunto. Implementamos uma classe Set completa, se comparada á implementação atual de Set em outras linguagens de progamação.
