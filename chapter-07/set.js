@@ -1,7 +1,6 @@
 class Set {
   constructor() {
     this.items = {};
-    this.count = 0;
   }
 
   // O protótipo de Object tem o método hasOwnProperty, que devolve um booleano informando se o objeto tem a propiedades especificada diretamente no objeto ou não, o operador in devolve um booleano informando se o objeto tem a propiedade espeficicada na cadeia do objeto.
@@ -37,13 +36,13 @@ class Set {
     return Object.keys(this.items).length;
   }
 
-  // Extrair cada propiedade o objeto items  manualmente, e contar quantas propiedades existem no objeto.
+  // Extrair cada propiedade do objeto items manualmente, e contar quantas propiedades existem no objeto.
   sizeLegacy() {
     let count = 0;
 
     for (let key in this.items) {
       if (this.items.hasOwnProperty(key)) {
-        this.count++;
+        count++;
       }
     }
 
