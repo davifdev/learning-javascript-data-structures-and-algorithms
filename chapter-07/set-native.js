@@ -1,3 +1,7 @@
+// A EcmaScript 2015 Introduziu a classe Set como parte da API de JavaScript.
+// A diferença entre a nossa classe Set e a Classe Set da ES2015 é que o método values devolve um Iterator, em vez de devolver o array com os valores
+// A classe Set nativa não possui funcionalidades de  União, Interseção, Diferença e Subconjunto.
+
 const setA = new Set();
 setA.add(1);
 setA.add(2);

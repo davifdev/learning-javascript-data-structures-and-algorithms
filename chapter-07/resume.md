@@ -22,7 +22,7 @@ Quando criamos uma consulta SQL, podemos especificar se queremos ler todos os da
 - Isso significa que x (o elemento) está presente em A ou x está presente em B.
 
 - <strong>Interseção</strong>: dados dois conjuntos, devolve um novo conjunto com os elementos presentes em ambos os conjuntos. A ∩ B = x
-- Isso significa que x está presente tanto em A quanto em B havendo, assim um compartilhamento de um ou mais elementos entre A e B.
+- Isso significa que x está presente tanto em A quanto em B havendo assim um compartilhamento de um ou mais elementos entre A e B.
 
 - <strong>Diferença</strong>: dados dois conjuntos, devolve um novo conjunto com todos os elementos presentes no primeiro conjunto, mas não no segundo. A - B = x
 - Isso significa que x está presente em A, mas não está presente em B.
