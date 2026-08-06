@@ -12,3 +12,6 @@ De modo semelhante á classe Set, a ECMAScript 2015 contém igualmente uma imple
 De modo semelhante á classe Set, também armazenaremos os elementos da classe Dictionaru em uma instância de Object.
 
 O JavaScript nos permite acessar a propiedade de um objeto usando colchetes ([]), passando o nome da propiedade como posição. É por isso que ele é chamado de array associativo!
+
+Não podemos simplesmente usar a instrução for-in e iterar pelas propiedades do objeto table. Precisamos usar também o método hasKey, pois o protótipo do objeto contém propiedades adicionais.
+As propiedades são herdadas da classe-base Object de JavaScript, mas o objeto continua tendo propiedades que não são de nosso interesse nessa estrutura de dados.
