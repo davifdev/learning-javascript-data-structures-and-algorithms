@@ -6,6 +6,10 @@ export default class LinkedList {
     this.head = undefined;
     this.equalsFn = equalsFn;
   }
+
+  getHead() {
+    return this.head;
+  }
   // Adiciona um novo elemento no final da lista
   push(element) {
     const node = new Node(element);
