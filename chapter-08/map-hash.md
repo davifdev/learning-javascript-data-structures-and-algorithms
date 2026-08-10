@@ -9,7 +9,7 @@ Um dicionário é muito parecido com um conjunto; um conjunto armazena uma cole�
 Em ciência da computação, os dicionários são usados frequentemente para armazenar endereços de referência de objetos.
 
 De modo semelhante á classe Set, a ECMAScript 2015 contém igualmente uma implementação da classe Map, também conhecida como dicionário.
-De modo semelhante á classe Set, também armazenaremos os elementos da classe Dictionaru em uma instância de Object.
+De modo semelhante á classe Set, também armazenaremos os elementos da classe Dictionary em uma instância de Object.
 
 O JavaScript nos permite acessar a propiedade de um objeto usando colchetes ([]), passando o nome da propiedade como posição. É por isso que ele é chamado de array associativo!
 
