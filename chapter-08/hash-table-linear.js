@@ -1,8 +1,7 @@
 import LinkedList from "../chapter-06/linked-list.js";
 import { ValuePair } from "../models/value-pair.js";
 import { defaultToString } from "../utils/index.js";
-
-class HasTableSeparateChaining {
+class HasTableLinearProbing {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {};
@@ -69,9 +68,12 @@ class HasTableSeparateChaining {
 
   verifyRemoveSideEffect(key, removedPosition) {
     const hash = this.hashCode(key);
+
     let index = removedPosition + 1;
+
     while (this.table[index] != null) {
       const posHash = this.hashCode(this.table[index].key);
+
       if (posHash <= hash || posHash <= removedPosition) {
         this.table[removedPosition] = this.table[index];
         delete this.table[index];
@@ -83,6 +85,7 @@ class HasTableSeparateChaining {
 
   remove(key) {
     const position = this.hashCode(key);
+
     if (this.table[position] != null) {
       if (this.table[position].key === key) {
         delete this.table[position];
@@ -102,3 +105,18 @@ class HasTableSeparateChaining {
     }
   }
 }
+
+const hashLinear = new HasTableLinearProbing();
+hashLinear.put("Gandalf", "gandalf@gmail.com");
+hashLinear.put("Ygritte", "ygritte@gmail.com");
+hashLinear.put("Jonathan", "jonathan@gmail.com");
+hashLinear.put("Jamie", "jamie@gmail.com");
+hashLinear.put("Jack", "jack@gmail.com");
+hashLinear.put("Jasmine", "jasmine@gmail.com");
+hashLinear.put("Jake", "jake@gmail.com");
+hashLinear.put("Nathan", "nathan@gmail.com");
+hashLinear.put("Athelstan", "athelstan@gmail.com");
+hashLinear.put("Sue", "sue@gmail.com");
+hashLinear.put("Aethelwulf", "aethelwulf@gmail.com");
+hashLinear.put("Sargeras", "sargeras@gmail.com");
+console.log(hashLinear);

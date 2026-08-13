@@ -6,6 +6,7 @@ O hashing consiste em encontrar um valor em um estrutura de dados o mais rápido
 Quando usamos uma função de hash, já sabemos em que posição o valor se encontra, portanto podemos simplesmente o acessar.
 Uma função de hash é uma função que, dada uma key, devolve o endereço em que o valor está na tabela.
 Em ciência da computação, a tabela hash tem vários casos de uso. Ela pode ser usada como arrays associativos, pois é uma implementação do dicionário, e também pode ser usada para indexar um banco de dados.
+Um array associativo é uma estrutura de dados que guarda valores ligados a nomes chamados chaves, em vez de usar números de ordem. Cada item forma um par de chave e valor, o que facilita buscar uma informação exata usando uma palavra descritiva.
 
 A linguagem JavaScript usa uma tabela hash internamente para representar cada objeto. Nesse caso, cada propiedade e cada método do objeto são armazenados como tipos de objeto key, e cada key aponta para o respectivo membro do objeto.
 

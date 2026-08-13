@@ -111,7 +111,7 @@ const dictionary = new Dictionary();
 dictionary.set("Gandalf", "gandalf@gmail.com");
 dictionary.set("Gandalf", "gandalf@gmail.com");
 dictionary.set("Tyrion", "tyrion@gmail.com");
-console.log(dictionary.toString());
+console.log(dictionary);
 // dictionary.forEach((k, v) => {
 //   console.log("forEach: ", `key: ${k}, value: ${v}`);
 // });
