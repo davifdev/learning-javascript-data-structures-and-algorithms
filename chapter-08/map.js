@@ -75,6 +75,7 @@ class Dictionary {
     const valuePairs = this.keyValues();
     for (let i = 0; i < valuePairs.length; i++) {
       const result = callbackFn(valuePairs[i].key, valuePairs[i].value);
+
       if (result === false) {
         break;
       }
@@ -102,24 +103,24 @@ class Dictionary {
     for (let i = 1; i < valuePairs.length; i++) {
       objString = `${objString}, ${valuePairs[i].toString()}`;
     }
-    return valuePairs;
+    return objString;
   }
 }
 
 const dictionary = new Dictionary();
 dictionary.set("Gandalf", "gandalf@gmail.com");
-dictionary.set("John", "johnsnow@gmail.com");
+dictionary.set("Gandalf", "gandalf@gmail.com");
 dictionary.set("Tyrion", "tyrion@gmail.com");
-
-console.log(dictionary.hasKey("Gandalf"));
-console.log(dictionary.size());
-console.log(dictionary.keys());
-console.log(dictionary.values());
-console.log(dictionary.get("Tyrion"));
-dictionary.remove("John");
-console.log(dictionary.keys());
-console.log(dictionary.values());
-console.log(dictionary.keyValues());
-dictionary.forEach((k, v) => {
-  console.log("forEach: ", `key: ${k}, value: ${v}`);
-});
+console.log(dictionary.toString());
+// dictionary.forEach((k, v) => {
+//   console.log("forEach: ", `key: ${k}, value: ${v}`);
+// });
+// console.log(dictionary.hasKey("Gandalf"));
+// console.log(dictionary.size());
+// console.log(dictionary.keys());
+// console.log(dictionary.values());
+// console.log(dictionary.get("Tyrion"));
+// dictionary.remove("John");
+// console.log(dictionary.keys());
+// console.log(dictionary.values());
+// console.log(dictionary.keyValues());
