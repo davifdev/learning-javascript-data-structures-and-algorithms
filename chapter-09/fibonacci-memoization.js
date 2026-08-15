@@ -7,4 +7,4 @@ function fibonacciMemoization(n) {
   return fibonacci;
 }
 
-console.log(fibonacciMemoization(5)());
+console.log(fibonacciMemoization(5));
