@@ -2,7 +2,7 @@
 
 A recursão é um método para resolução de problemas que consiste em solucionar partes menores do mesmo problema até resolvermos o problema original, mais amplo. Em geral, ela envolve chamar a própia função.
 
-Resolver um problema usando versões menores do própio problema até chegara a um caso simples que poderemos resolver diretamente.
+Resolver um problema usando versões menores do própio problema até chegar a um caso simples que poderemos resolver diretamente.
 
 A ECMAScript 2015 tem tail call optimization (otimização de chamadas finais, ou otimização de chamadas de cauda). Se uma chamada de função for a última ação em uma função, ela será tratada como um jump e não como uma subroutine, isso significa que o nosso código pode ser executado indefinidamente na ECMAScript 2015. Por isso é muito importante ter um caso de base para interromper a recursão.
 

@@ -1,4 +1,4 @@
-import { defaultEquals } from "../utils/index.js";
+import { defaultCompare, defaultEquals } from "../utils/index.js";
 import { LinkedList } from "./linked-list.js";
 
 const Compare = {
@@ -6,12 +6,6 @@ const Compare = {
   BIGGER_THAN: 1,
 };
 
-function defaultCompare(a, b) {
-  if (a === b) {
-    return 0;
-  }
-  return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN;
-}
 class SortedLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals, compareFn = defaultCompare) {
     super(equalsFn);
