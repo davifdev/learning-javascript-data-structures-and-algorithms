@@ -14,24 +14,28 @@ export class BinarySearchTree {
 
   insert(key) {
     if (this.root == null) {
-      this.root = new Node(key);
+      // 1
+      this.root = new Node(key); // 2
     } else {
-      this.insertNode(this.root, key);
+      this.insertNode(this.root, key); // 3
     }
   }
 
   insertNode(node, key) {
     if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      // 4
       if (node.left == null) {
-        node.left = new Node(key);
+        // 5
+        node.left = new Node(key); // 6
       } else {
-        this.insertNode(node.left, key);
+        this.insertNode(node.left, key); // 7
       }
     } else {
       if (node.right == null) {
-        node.right = new Node(key);
+        // 8
+        node.right = new Node(key); // 9
       } else {
-        this.insertNode(node.right, key);
+        this.insertNode(node.right, key); // 10
       }
     }
   }
@@ -71,6 +75,82 @@ export class BinarySearchTree {
       callback(node.key);
     }
   }
+
+  min() {
+    return this.minNode(this.root);
+  }
+
+  minNode(node) {
+    let current = node;
+    while (current != null && current.left != null) {
+      current = current.left;
+    }
+    return current;
+  }
+
+  max() {
+    this.maxNode(this.root);
+  }
+
+  maxNode(node) {
+    let current = node;
+    while (current != null && current.right != null) {
+      current = current.right;
+    }
+    return current;
+  }
+
+  search(key) {
+    return this.searchNode(this.root, key);
+  }
+
+  searchNode(node, key) {
+    if (node == null) {
+      return false;
+    }
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      return this.searchNode(node.left, key);
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      return this.searchNode(node.right, key);
+    } else {
+      return true;
+    }
+  }
+
+  remove(key) {
+    this.root = this.removeNode(this.root, key);
+  }
+
+  removeNode(node, key) {
+    if (node == null) {
+      return null;
+    }
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      node.left = this.removeNode(node.left, key);
+      return node;
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      node.right = this.removeNode(node.right, key);
+      return node;
+    } else {
+      // Removendo uma folha
+      if (node.left == null && node.right == null) {
+        node = null;
+        return node;
+      }
+      // Removendo um nó com um filho á esquerda ou á direita
+      if (node.left == null) {
+        node = node.right;
+        return node;
+      } else if (node.right == null) {
+        node = node.left;
+        return node;
+      }
+      const aux = this.minNode(node.right); // 18
+      node.key = aux.key; // 19
+      node.right = this.removeNode(node.right, aux.key); // 20
+      return node; // 21
+    }
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -89,9 +169,10 @@ tree.insert(20);
 tree.insert(18);
 tree.insert(25);
 tree.insert(6);
-console.log(tree);
+console.log(tree.search(1) ? "Key 1 found" : "Key 1 not found");
+console.log(tree.search(8) ? "Key 8 found" : "Key 8 not found");
 
 const printNode = (value) => console.log(value);
-tree.inOrderTraverse(printNode);
-tree.preOrderTraverse(printNode);
-tree.postOrderTraverse(printNode);
+// tree.inOrderTraverse(printNode);
+// tree.preOrderTraverse(printNode);
+// tree.postOrderTraverse(printNode);
