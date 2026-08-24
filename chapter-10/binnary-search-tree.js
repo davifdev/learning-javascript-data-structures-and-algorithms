@@ -1,11 +1,5 @@
 import { Node } from "../models/binnary-search-tree.js";
-import { defaultCompare } from "../utils/index.js";
-
-const Compare = {
-  LESS_THAN: -1,
-  BIGGER_THAN: 1,
-};
-
+import { Compare, defaultCompare } from "../utils/index.js";
 export class BinarySearchTree {
   constructor(compareFn = defaultCompare) {
     this.compareFn = compareFn; // usado para comparar os valores dos nós

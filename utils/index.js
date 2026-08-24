@@ -13,9 +13,14 @@ export function defaultToString(item) {
   return item.toString();
 }
 
-const Compare = {
+export const Compare = {
   LESS_THAN: -1,
   BIGGER_THAN: 1,
+};
+
+export const Colors = {
+  BLACK: "BLACK",
+  RED: "RED",
 };
 
 export function defaultCompare(a, b) {
