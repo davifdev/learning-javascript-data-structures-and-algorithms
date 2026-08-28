@@ -3,7 +3,7 @@
 // 3. Todas as folhas são pretas (os nós representados com referência null).
 // 4. Se um nó for vermelho, então seus dois filhos serão pretos.
 // 5. Não pode haver dois nós vermelhos adjacentes. Um nó vermelho não pode ter um pai ou um filho vermelho.
-// 6. Todo caminho (path) de um dado nó para qualquer um de seus descendentes (folhas null) contém o mesmo número de nós pretos.
+// 6. Todo caminho (path) de um dado nó pabra qualquer um de seus descendentes (folhas null) contém o mesmo número de nós pretos.
 
 import { RedBlackNode } from "../models/red-black-node";
 import { Colors, Compare, defaultCompare } from "../utils";
