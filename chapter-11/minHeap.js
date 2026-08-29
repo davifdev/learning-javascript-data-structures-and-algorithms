@@ -1,5 +1,4 @@
 import { Compare, defaultCompare, swap } from "../utils/index.js";
-
 export class MinHeap {
   constructor(compareFn = defaultCompare) {
     this.compareFn = compareFn;
