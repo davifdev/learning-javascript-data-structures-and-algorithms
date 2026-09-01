@@ -1,7 +1,7 @@
 import { ValuePair } from "../models/value-pair.js";
 import { defaultToString } from "../utils/index.js";
 
-class Dictionary {
+export class Dictionary {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {};
